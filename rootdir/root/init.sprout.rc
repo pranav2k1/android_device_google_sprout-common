@@ -3,6 +3,8 @@
 import /init.sprout_common.rc
 
 on init
+    export LD_SHIM_LIBS "/system/vendor/lib/libwvm.so|libshims_wvm.so:/system/lib/libcam_utils.so|libshims_camera.so"
+
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
     mkdir /storage/sdcard0 0700 root root
